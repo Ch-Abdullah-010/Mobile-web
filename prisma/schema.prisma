@@ -1,0 +1,254 @@
+// SmartPOS Mobile Store — data model
+// SQLite provider (no native enums / Json scalars; status fields are strings).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  phone        String?
+  role         String   @default("CUSTOMER") // CUSTOMER | ADMIN
+  isActive     Boolean  @default(true)
+  isDemo       Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  addresses Address[]
+  orders    Order[]
+  reviews   Review[]
+}
+
+model Address {
+  id         String  @id @default(cuid())
+  userId     String
+  label      String  @default("Home")
+  fullName   String
+  phone      String
+  line1      String
+  line2      String?
+  city       String
+  postalCode String
+  country    String  @default("Pakistan")
+  isDefault  Boolean @default(false)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String
+  image       String
+  icon        String   @default("Smartphone")
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  products Product[]
+}
+
+model Product {
+  id               String   @id @default(cuid())
+  name             String
+  slug             String   @unique
+  brand            String
+  sku              String   @unique
+  categoryId       String
+  description      String
+  shortDescription String
+  basePrice        Float
+  compareAtPrice   Float?
+  currency         String   @default("PKR")
+  images           String   @default("[]") // JSON string[]
+  colors           String   @default("[]") // JSON string[]
+  storageOptions   String   @default("[]") // JSON string[]
+  ramOptions       String   @default("[]") // JSON string[]
+  display          String?
+  camera           String?
+  battery          String?
+  warranty         String   @default("1 Year")
+  specs            String   @default("{}") // JSON Record<string,string>
+  featured         Boolean  @default(false)
+  isNew            Boolean  @default(false)
+  status           String   @default("ACTIVE") // ACTIVE | INACTIVE
+  soldCount        Int      @default(0)
+  viewCount        Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  category   Category          @relation(fields: [categoryId], references: [id])
+  variants   ProductVariant[]
+  orderItems OrderItem[]
+  reviews    Review[]
+
+  @@index([categoryId])
+  @@index([brand])
+}
+
+model ProductVariant {
+  id                String   @id @default(cuid())
+  productId         String
+  sku               String   @unique
+  color             String
+  storage           String   @default("")
+  ram               String   @default("")
+  price             Float
+  stock             Int      @default(0)
+  lowStockThreshold Int      @default(5)
+  isActive          Boolean  @default(true)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  product    Product             @relation(fields: [productId], references: [id], onDelete: Cascade)
+  movements  InventoryMovement[]
+  orderItems OrderItem[]
+
+  @@index([productId])
+}
+
+model InventoryMovement {
+  id        String   @id @default(cuid())
+  variantId String
+  type      String // SALE | PURCHASE | ADJUSTMENT | RETURN | INITIAL
+  quantity  Int // signed
+  reason    String?
+  reference String?
+  createdAt DateTime @default(now())
+
+  variant ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+
+  @@index([variantId])
+}
+
+model Order {
+  id             String   @id @default(cuid())
+  orderNumber    String   @unique
+  userId         String?
+  channel        String   @default("ONLINE") // ONLINE | POS
+  status         String   @default("PENDING") // PENDING | CONFIRMED | PROCESSING | SHIPPED | DELIVERED | CANCELLED
+  paymentStatus  String   @default("UNPAID") // UNPAID | PAID | REFUNDED
+  paymentMethod  String   @default("COD") // COD | CARD | CASH
+
+  customerName  String
+  customerEmail String
+  customerPhone String
+
+  shippingLine1    String?
+  shippingLine2    String?
+  shippingCity     String?
+  shippingPostal   String?
+  shippingCountry  String?
+
+  subtotal Float
+  discount Float @default(0)
+  shipping Float @default(0)
+  tax      Float @default(0)
+  total    Float
+  currency String @default("PKR")
+  notes    String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user     User?                 @relation(fields: [userId], references: [id], onDelete: SetNull)
+  items    OrderItem[]
+  payments Payment[]
+  history  OrderStatusHistory[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  productId String?
+  variantId String?
+  name      String
+  sku       String
+  image     String?
+  price     Float
+  quantity  Int
+  lineTotal Float
+
+  order   Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product?        @relation(fields: [productId], references: [id], onDelete: SetNull)
+  variant ProductVariant? @relation(fields: [variantId], references: [id], onDelete: SetNull)
+
+  @@index([orderId])
+}
+
+model OrderStatusHistory {
+  id        String   @id @default(cuid())
+  orderId   String
+  status    String
+  note      String?
+  createdAt DateTime @default(now())
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId])
+}
+
+model Payment {
+  id        String   @id @default(cuid())
+  orderId   String
+  method    String
+  provider  String   @default("DEMO")
+  amount    Float
+  status    String   @default("PENDING") // PENDING | PAID | FAILED | REFUNDED
+  reference String?
+  createdAt DateTime @default(now())
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId])
+}
+
+model Review {
+  id         String   @id @default(cuid())
+  productId  String
+  userId     String?
+  authorName String
+  rating     Int
+  title      String?
+  comment    String
+  isDemo     Boolean  @default(true)
+  createdAt  DateTime @default(now())
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  user    User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([productId])
+}
+
+model EmailLog {
+  id        String   @id @default(cuid())
+  to        String
+  subject   String
+  template  String
+  body      String
+  status    String   @default("SENT") // SENT | FAILED
+  error     String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model Setting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}

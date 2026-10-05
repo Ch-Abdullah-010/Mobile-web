@@ -1,0 +1,127 @@
+{
+  "note": "Official brand images, downloaded directly from each manufacturer's own website / press newsroom in Sep 2026. One image per product, no logos.",
+  "products": {
+    "samsung-galaxy-a16": {
+      "file": "public/images/products/samsung-galaxy-a16.jpg",
+      "source": "https://img.global.news.samsung.com/uk/wp-content/uploads/2024/11/SM-A166F_Galaxy-A16_5G_Blue-Black_Front.jpg",
+      "page": "https://news.samsung.com/uk/galaxy-a16-5g-galaxy-a06-launched"
+    },
+    "samsung-galaxy-a25": {
+      "file": "public/images/products/samsung-galaxy-a25.jpg",
+      "source": "https://img.kr.news.samsung.com/kr/wp-content/uploads/2024/01/%EA%B0%A4%EB%9F%AD%EC%8B%9C-A25-5G_%EB%B8%94%EB%A3%A8%EB%B8%94%EB%9E%99.jpg",
+      "page": "https://news.samsung.com/kr/galaxy-a25-5g-galaxy-a15-%EA%B2%BD%EB%9E%9C%EB%A0%A5-%EA%B0%80%EA%B2%A9%EC%9D%98-%EC%83%88-%EA%B0%91%EB%B0%8B"
+    },
+    "samsung-galaxy-a35": {
+      "file": "public/images/products/samsung-galaxy-a35.png",
+      "source": "https://images.samsung.com/is/image/samsung/p6pim/latin_en/sm-a356ezkglte/gallery/latin-en-galaxy-a35-5g-sm-a356-500302-sm-a356ezkglte-540451378?$Q90_2052_1641_JPG$",
+      "page": "https://www.samsung.com/latin_en/smartphones/galaxy-a/galaxy-a35-5g-awesome-navy-256gb-sm-a356ezkglte/"
+    },
+    "apple-iphone-13": {
+      "file": "public/images/products/apple-iphone-13.jpg",
+      "source": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone13_hero_09142021_inline.jpg.large_2x.jpg",
+      "page": "https://www.apple.com/newsroom/2021/09/apple-announces-iphone-13-and-iphone-13-mini/"
+    },
+    "apple-iphone-14": {
+      "file": "public/images/products/apple-iphone-14.jpg",
+      "source": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large_2x.jpg",
+      "page": "https://www.apple.com/newsroom/2022/09/apple-introduces-iphone-14-and-iphone-14-plus/"
+    },
+    "apple-iphone-15": {
+      "file": "public/images/products/apple-iphone-15.jpg",
+      "source": "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-design-230912_big.jpg.large_2x.jpg",
+      "page": "https://www.apple.com/newsroom/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/"
+    },
+    "redmi-note-13": {
+      "file": "public/images/products/redmi-note-13.png",
+      "source": "https://i02.appmifile.com/994_operatorx_operatorx_opx/11/01/2024/72a71b312950178179eeb71425ef8def.png",
+      "page": "https://www.mi.com/global/product/redmi-note-13/"
+    },
+    "redmi-note-13-pro": {
+      "file": "public/images/products/redmi-note-13-pro.png",
+      "source": "https://i02.appmifile.com/13_operatorx_operatorx_opx/11/01/2024/25da829b5997ff8aea28af388df3b8df.png",
+      "page": "https://www.mi.com/global/product/redmi-note-13-pro/"
+    },
+    "oneplus-nord-ce-4": {
+      "file": "public/images/products/oneplus-nord-ce-4.png",
+      "source": "https://image01-in.oneplus.net/media/202407/04/317c987210f1dcffe063a9e56de526a5.png",
+      "page": "https://www.oneplus.in/nord-ce4"
+    },
+    "oneplus-nord-4": {
+      "file": "public/images/products/oneplus-nord-4.png",
+      "source": "https://oasis.opstatics.com/content/dam/oasis/page/avalon/en/v2/assets/images-starter-phone-1-1.png",
+      "page": "https://www.oneplus.com/nord-4"
+    },
+    "google-pixel-8": {
+      "file": "public/images/products/google-pixel-8.jpg",
+      "source": "https://lh3.googleusercontent.com/IigjdpP92zuyA1JFiHUMCdnxq0Lo2HtHF5VmSeQDkxmLsHLE85holHTfuFXq21OsMrxxYCwmVmEelST9Xi86j-iGlZTiVHO0NLg=rj-sc0xffffffff",
+      "page": "https://store.google.com/product/pixel_8"
+    },
+    "google-pixel-8a": {
+      "file": "public/images/products/google-pixel-8a.jpg",
+      "source": "https://lh3.googleusercontent.com/-hd7ag271kSqQF2WRn3jXV3S2jVt-_nFga3bAqmGPXWbb2l-2R3f36_nO9INClVqmB81BNGVN7XUHaifUFzzUcrpFwha7hTS3U4z=rj-sc0xffffffff",
+      "page": "https://store.google.com/product/pixel_8a"
+    },
+    "anker-soundcore-p40i-earbuds": {
+      "file": "public/images/products/anker-soundcore-p40i-earbuds.png",
+      "source": "https://cdn.shopify.com/s/files/1/0516/3761/6830/files/A3955Z11_TD01_V1.png?v=1749638743",
+      "page": "https://www.soundcore.com/products/a3955-p40i-earbuds"
+    },
+    "redmi-buds-5": {
+      "file": "public/images/products/redmi-buds-5.png",
+      "source": "https://i02.appmifile.com/735_operatorx_operatorx_opx/11/01/2024/34bf6081e4d7666038873f17cd02eb84.png",
+      "page": "https://www.mi.com/global/product/redmi-buds-5/"
+    },
+    "anker-soundcore-h30i-headphones": {
+      "file": "public/images/products/anker-soundcore-h30i-headphones.jpg",
+      "source": "https://cdn.shopify.com/s/files/1/0516/3761/6830/files/51fEeuXfGTL._AC_SX466_557b84d0-7431-406a-87b0-05c4b76bab9f.jpg?v=1753675342",
+      "page": "https://www.soundcore.com/products/soundcore-h30i"
+    },
+    "anker-33w-usb-c-charger": {
+      "file": "public/images/products/anker-33w-usb-c-charger.png",
+      "source": "https://cdn.shopify.com/s/files/1/0493/9834/9974/files/A2331111_20241009_TD_5391a95a-d5bc-4208-b57b-d915711ff334.png?v=1749627285",
+      "page": "https://www.anker.com/products/a2331"
+    },
+    "anker-usb-c-cable": {
+      "file": "public/images/products/anker-usb-c-cable.png",
+      "source": "https://cdn.shopify.com/s/files/1/0493/9834/9974/files/B8752011_TD01.png?v=1748225373",
+      "page": "https://www.anker.com/products/a8752",
+      "note": "Official Anker New Nylon USB-C to USB-C Cable (60W) product render; seed cable is not an exact retail SKU."
+    },
+    "anker-20w-car-charger": {
+      "file": "public/images/products/anker-20w-car-charger.png",
+      "source": "https://cdn.shopify.com/s/files/1/0493/9834/9974/files/61y5cohnVHS.png?v=1699262511",
+      "page": "https://www.anker.com/products/a2724"
+    },
+    "anker-powercore-20000": {
+      "file": "public/images/products/anker-powercore-20000.png",
+      "source": "https://cdn.shopify.com/s/files/1/0695/6531/7291/files/a1287.png?v=1746693155",
+      "page": "https://www.anker.com/nz/products/a1287"
+    },
+    "spigen-rugged-armor-cover": {
+      "file": "public/images/products/spigen-rugged-armor-cover.jpg",
+      "source": "https://www.spigen.com/cdn/shop/products/title_web_iphone6.7p_rugged_armor_magfit_01.jpg?v=1695335474",
+      "page": "https://www.spigen.com/products/iphone-15-series-case-rugged-armor-magfit"
+    },
+    "spigen-iphone-15-silicone-cover": {
+      "file": "public/images/products/spigen-iphone-15-silicone-cover.jpg",
+      "source": "https://www.spigen.com/cdn/shop/products/title_web_ip15_lc_cc_01.jpg?v=1695336019",
+      "page": "https://www.spigen.com/products/iphone-15-series-case-liquid-crystal",
+      "note": "Official Spigen iPhone 15 case render (Liquid Crystal) - closest official Spigen product for a soft flexible iPhone 15 cover."
+    },
+    "spigen-tempered-glass": {
+      "file": "public/images/products/spigen-tempered-glass.jpg",
+      "source": "https://www.spigen.com/cdn/shop/files/title_web_ip6.7p_glas_tr_ezfit_privacy_02.jpg?v=1695762562",
+      "page": "https://www.spigen.com/products/iphone-15-series-glas-tr-ez-fit-privacy"
+    },
+    "xiaomi-smart-band-8": {
+      "file": "public/images/products/xiaomi-smart-band-8.png",
+      "source": "https://i02.appmifile.com/797_operatorx_operatorx_opx/26/09/2023/b85b88afff6b9fb37e558cb6f3d261cd.png",
+      "page": "https://www.mi.com/global/product/xiaomi-smart-band-8/"
+    },
+    "jbl-go-4-speaker": {
+      "file": "public/images/products/jbl-go-4-speaker.jpg",
+      "source": "https://d21buns5ku92am.cloudfront.net/68766/images/519911-JBL%20Go%204%20Lifestyle-c9babb-large-1704370654.jpg",
+      "page": "https://news.jbl.com/en/news/jbl-go-4"
+    }
+  }
+}
