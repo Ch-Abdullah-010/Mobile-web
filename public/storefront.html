@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartPOS Mobile Store — Smart Shopping. Smarter Management.</title>
+    <meta
+      name="description"
+      content="Shop the latest smartphones and mobile accessories with clear specifications, secure checkout and complete order tracking. SmartPOS Mobile Store — Smart Shopping. Smarter Management."
+    />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta property="og:title" content="SmartPOS Mobile Store" />
+    <meta
+      property="og:description"
+      content="Latest 5G smartphones, earbuds, chargers and accessories with official warranty."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="storefront.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="announce">
+      <div class="container">
+        <p>Free delivery on orders over Rs 100,000 · This is a demo store</p>
+        <div class="announce-links">
+          <a href="contact.html">Contact</a>
+          <a href="/account/orders">Track order</a>
+          <a href="/admin">Admin / POS</a>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="storefront.html" aria-label="SmartPOS Mobile Store home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+              <path d="M12 18h.01" />
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">SmartPOS</span>
+            <span class="brand-tag">Mobile Store</span>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <a href="storefront.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="categories.html">Categories</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="/faq">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="icon-btn" href="products.html" aria-label="Search products">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </a>
+          <a class="icon-btn" href="/cart" aria-label="Shopping cart">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+            </svg>
+            <span class="cart-count" data-cart-count style="display:none">0</span>
+          </a>
+          <div class="header-auth">
+            <a class="btn btn-ghost btn-sm" href="/auth/login">Sign in</a>
+            <a class="btn btn-primary btn-sm" href="/auth/register">Register</a>
+          </div>
+          <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="container">
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+          <ul>
+            <li><a href="storefront.html" data-page>Home</a></li>
+            <li><a href="products.html" data-page>Products</a></li>
+            <li><a href="categories.html" data-page>Categories</a></li>
+            <li><a href="about.html" data-page>About</a></li>
+            <li><a href="contact.html" data-page>Contact</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+          <div class="mobile-auth">
+            <a class="btn btn-outline" href="/auth/login">Sign in</a>
+            <a class="btn btn-primary" href="/auth/register">Register</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="bg-grid" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div>
+            <span class="badge badge-brand">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9.94 14.34 8.5 18l-1.44-3.66L3.4 13l3.66-1.34L8.5 8l1.44 3.66L13.6 13z" />
+                <path d="M18 4v4" /><path d="M20 6h-4" /><path d="M18 14v3" /><path d="M19.5 15.5h-3" />
+              </svg>
+              Smart Shopping. Smarter Management.
+            </span>
+            <h1>The latest smartphones &amp; accessories, <span class="text-gradient">all in one store</span></h1>
+            <p class="hero-copy">
+              Compare clear specifications, choose the right variant, check real stock levels and track
+              every order from your account. Powered by the SmartPOS management system.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" href="products.html?category=smartphones">
+                Shop smartphones
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+              <a class="btn btn-outline btn-lg" href="products.html">Browse all products</a>
+            </div>
+            <dl class="hero-stats">
+              <div>
+                <dt>Products</dt>
+                <dd data-stat-products>24</dd>
+              </div>
+              <div>
+                <dt>Categories</dt>
+                <dd data-stat-categories>8</dd>
+              </div>
+              <div>
+                <dt>Warranty</dt>
+                <dd>Official</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual-wrap" data-hero-product aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- Value props -->
+      <section class="value-props">
+        <div class="container grid">
+          <div class="value-item">
+            <span class="value-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg>
+            </span>
+            <div>
+              <h3>Official warranty</h3>
+              <p>Every device is covered by the manufacturer's official warranty.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg>
+            </span>
+            <div>
+              <h3>Nationwide delivery</h3>
+              <p>Fast courier delivery across Pakistan with order tracking.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></svg>
+            </span>
+            <div>
+              <h3>Flexible payments</h3>
+              <p>Pay by cash on delivery or a simulated card checkout.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5a9 9 0 0 1 18 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /><path d="M21 16v2a4 4 0 0 1-4 4h-5" /></svg>
+            </span>
+            <div>
+              <h3>Real support</h3>
+              <p>Talk to our team before and after your purchase.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Browse</p>
+              <h2>Shop by category</h2>
+              <p>From flagship smartphones to everyday essentials, find exactly what you need.</p>
+            </div>
+            <a class="btn btn-outline btn-sm" href="products.html">
+              All products
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+            </a>
+          </div>
+          <div class="grid-categories" data-category-grid></div>
+        </div>
+      </section>
+
+      <!-- Featured -->
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Popular right now</p>
+              <h2>Featured products</h2>
+              <p>Hand-picked devices and accessories loved by our customers.</p>
+            </div>
+            <a class="btn btn-outline btn-sm" href="products.html?sort=popular">
+              View more
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+            </a>
+          </div>
+          <div class="grid-products" data-render="featured"></div>
+        </div>
+      </section>
+
+      <!-- Accessories -->
+      <section class="section">
+        <div class="container promo-grid">
+          <div class="promo-panel">
+            <span class="badge badge-brand">Accessories</span>
+            <h2>Everything that goes with your phone</h2>
+            <p>
+              Earbuds, fast chargers, power banks, protective cases, screen protectors, smart watches and
+              speakers — all tested for compatibility.
+            </p>
+            <a class="btn btn-primary btn-lg" href="products.html?category=audio">
+              Shop accessories
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+            </a>
+          </div>
+          <div class="promo-products" data-render="accessories"></div>
+        </div>
+      </section>
+
+      <!-- New arrivals -->
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Just landed</p>
+              <h2>New arrivals</h2>
+              <p>The newest additions to our shelves.</p>
+            </div>
+            <a class="btn btn-outline btn-sm" href="products.html?sort=newest">
+              See what's new
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+            </a>
+          </div>
+          <div class="grid-products" data-render="new"></div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Customer feedback</p>
+              <h2>What shoppers say</h2>
+              <p>Sample reviews from our demo dataset, shown to illustrate the review experience.</p>
+            </div>
+          </div>
+          <div class="grid-reviews" data-render="reviews"></div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="container" style="padding-bottom: 1rem">
+        <div class="cta-band">
+          <h2>Ready to find your next device?</h2>
+          <p>
+            Browse the full catalogue, add items to your cart and check out in minutes. Create an account
+            to track your orders.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-light btn-lg" href="products.html">Start shopping</a>
+            <a class="btn btn-on-dark btn-lg" href="/auth/register">Create an account</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="storefront.html">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-name">SmartPOS</span>
+              <span class="brand-tag">Mobile Store</span>
+            </span>
+          </a>
+          <p class="footer-about">
+            A modern mobile storefront backed by a complete point-of-sale and inventory management system.
+            All products and orders are demo data.
+          </p>
+          <div class="footer-contact">
+            <span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+              Shop 101, Tech Plaza, Main Boulevard, Lahore, Pakistan
+            </span>
+            <span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+              +92 21 1234567
+            </span>
+            <span>
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+              support@smartpos.example
+            </span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html?category=smartphones">Smartphones</a></li>
+            <li><a href="products.html?category=audio">Accessories</a></li>
+            <li><a href="products.html?sort=newest">New Arrivals</a></li>
+            <li><a href="/account/orders">Track Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/shipping-policy">Shipping Policy</a></li>
+            <li><a href="/return-policy">Return &amp; Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about.html">About SmartPOS</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms &amp; Conditions</a></li>
+            <li><a href="/admin">Admin / POS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; <span data-year>2026</span> SmartPOS Mobile Store. Demo project.</p>
+          <p class="tagline">Smart Shopping. Smarter Management.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="storefront.js"></script>
+  </body>
+</html>
