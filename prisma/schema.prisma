@@ -1,12 +1,12 @@
 // SmartPOS Mobile Store — data model
-// SQLite provider (no native enums / Json scalars; status fields are strings).
+// PostgreSQL provider for Vercel/Neon deployment
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -87,7 +87,7 @@ model Product {
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
-  category   Category          @relation(fields: [categoryId], references: [id])
+  category   Category         @relation(fields: [categoryId], references: [id])
   variants   ProductVariant[]
   orderItems OrderItem[]
   reviews    Review[]
@@ -110,8 +110,8 @@ model ProductVariant {
   createdAt         DateTime @default(now())
   updatedAt         DateTime @updatedAt
 
-  product    Product             @relation(fields: [productId], references: [id], onDelete: Cascade)
-  movements  InventoryMovement[]
+  product   Product             @relation(fields: [productId], references: [id], onDelete: Cascade)
+  movements InventoryMovement[]
   orderItems OrderItem[]
 
   @@index([productId])
@@ -132,23 +132,23 @@ model InventoryMovement {
 }
 
 model Order {
-  id             String   @id @default(cuid())
-  orderNumber    String   @unique
-  userId         String?
-  channel        String   @default("ONLINE") // ONLINE | POS
-  status         String   @default("PENDING") // PENDING | CONFIRMED | PROCESSING | SHIPPED | DELIVERED | CANCELLED
-  paymentStatus  String   @default("UNPAID") // UNPAID | PAID | REFUNDED
-  paymentMethod  String   @default("COD") // COD | CARD | CASH
+  id            String   @id @default(cuid())
+  orderNumber   String   @unique
+  userId        String?
+  channel       String   @default("ONLINE") // ONLINE | POS
+  status        String   @default("PENDING") // PENDING | CONFIRMED | PROCESSING | SHIPPED | DELIVERED | CANCELLED
+  paymentStatus String   @default("UNPAID") // UNPAID | PAID | REFUNDED
+  paymentMethod String   @default("COD") // COD | CARD | CASH
 
   customerName  String
   customerEmail String
   customerPhone String
 
-  shippingLine1    String?
-  shippingLine2    String?
-  shippingCity     String?
-  shippingPostal   String?
-  shippingCountry  String?
+  shippingLine1   String?
+  shippingLine2   String?
+  shippingCity    String?
+  shippingPostal  String?
+  shippingCountry String?
 
   subtotal Float
   discount Float @default(0)
@@ -161,7 +161,7 @@ model Order {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  user     User?                 @relation(fields: [userId], references: [id], onDelete: SetNull)
+  user     User?                @relation(fields: [userId], references: [id], onDelete: SetNull)
   items    OrderItem[]
   payments Payment[]
   history  OrderStatusHistory[]
